@@ -15,7 +15,7 @@ y poder cargarlo en nuestro programa.
 -Método ingresarCodigo(): este método permitirá ingresar el código completo de siete números de un celular. 
 Para ello, puede utilizarse un bucle repetitivo
 
-//Nota: Dado que el ejercicio no especifica que haya una impresion y el modo en que se deberia mostrar los datos, 
+Nota: Dado que el ejercicio no especifica que haya una impresion y el modo en que se deberia mostrar los datos, 
 he optado por modificar el codigo para que se imprima del siguiente modo:
 
 marca:            samsung       xiaomi   motorola
@@ -24,9 +24,8 @@ almacenamiento:     256           256       128
 precio:             10000        10000      8000
 codigo:            1287878     89182938    565675
 
-
-de este modo al imprimir se puede verificar que se han guardado los datos
-y se ve claramente cada producto que posee el sistema
+de este modo al imprimir se puede verificar que se han guardado los datos y se ve claramente cada producto 
+que posee el sistema
 
 
 */
@@ -46,7 +45,8 @@ public class TelefonoService {
             System.out.println("Ingrese la marca del telefono: ");  
             String marca = leer.nextLine();
             telefono.setMarca(marca);
-        
+            leer.nextLine();
+            
             System.out.println("Ingrese el precio del telefono: ");
             double precio = leer.nextDouble();
             telefono.setPrecio(precio);
@@ -54,7 +54,8 @@ public class TelefonoService {
             System.out.println("Ingrese el modelo del telefono: ");
             String modelo = leer.nextLine();
             telefono.setModelo(modelo);
-
+            leer.nextLine();
+            
             System.out.println("Ingrese la memoria Ram del telefono(en gigabytes): ");
             int memoriaRam = leer.nextInt();
             telefono.setMemoriaRam(memoriaRam);
