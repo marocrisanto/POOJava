@@ -42,17 +42,18 @@ public class MovilService {
             
         System.out.println("Ingrese el precio del telefono: ");
         double precio = leer.nextDouble();
+        leer.nextLine(); 
 
         System.out.println("Ingrese el modelo del telefono: ");
         String modelo = leer.nextLine();
-        leer.nextLine();
-            
+        
         System.out.println("Ingrese la memoria Ram del telefono(en gigabytes): ");
         int memoriaRam = leer.nextInt();
-
+        leer.nextLine();
 
         System.out.println("Ingrese el almacenamiento del telefono (en gigabytes): ");
         int almacenamiento = leer.nextInt(); 
+        leer.nextLine(); 
             
         int[] codigo = ingresarCodigo();
         
@@ -68,9 +69,8 @@ public class MovilService {
     public int[] ingresarCodigo(){
         int[] codigo = new int[7];
         for (int i = 0; i <codigo.length ; i++) {
-            System.out.println("Ingrese el numero de la posicion i codigo (Ej. [1][2][3][4][5][6][7]");
+            System.out.println("Ingrese el numero de la posicion"+(i+1)+": ");
             codigo[i] = leer.nextInt();
-
         }
         return codigo;
     }
