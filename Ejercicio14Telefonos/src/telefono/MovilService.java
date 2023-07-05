@@ -68,7 +68,7 @@ public class MovilService {
     public int[] ingresarCodigo(){
         int[] codigo = new int[7];
         for (int i = 0; i <codigo.length ; i++) {
-            System.out.println("Ingrese el codigo del movil de 7 digitos");
+            System.out.println("Ingrese el numero de la posicion i codigo (Ej. [1][2][3][4][5][6][7]");
             codigo[i] = leer.nextInt();
 
         }
