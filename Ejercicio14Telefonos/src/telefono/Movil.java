@@ -1,4 +1,4 @@
-package telefono;
+package movil;
 /*
 Una tienda que vende teléfonos móviles quiere tener registro de cada producto que posee en un sistema computacional. 
 Para ello, crearemos un programa donde se pueda almacenar cada producto con su información. 
@@ -16,19 +16,19 @@ Para ello, puede utilizarse un bucle repetitivo
 
 
 
-public class Telefono {
+public class Movil {
     //Atributos
     private String marca, modelo;
     private double precio;
     private int memoriaRam, almacenamiento;
-    private int[]codigo;
+    private int[] codigo = new int[7];
     
     //Constructor por defecto
-    public Telefono() {
+    public Movil() {
     }
     
     //Constructor con todos los atributos pasados como parametro
-    public Telefono(String marca, String modelo, double precio, int memoriaRam, int almacenamiento, int[] codigo) {
+    public Movil(String marca, String modelo, double precio, int memoriaRam, int almacenamiento, int[] codigo) {
         this.marca = marca;
         this.modelo = modelo;
         this.precio = precio;

@@ -1,8 +1,8 @@
     
-package telefonomain;
+package movilmain;
 
-import telefono.Telefono;
-import telefono.TelefonoService;
+import movil.Movil;
+import movil.MovilService;
 
 /*
 Una tienda que vende teléfonos móviles quiere tener registro de cada producto que posee en un sistema computacional. 
@@ -19,17 +19,17 @@ y poder cargarlo en nuestro programa.
 Para ello, puede utilizarse un bucle repetitivo
 */
 
-public class TelefonoMain {
+public class movilMain {
     public static void main(String[] args){
-        //Instanciamos la clase Telefono
-        Telefono telefono = new Telefono();
+        //Instanciamos la clase Movil para crear un objeto vacio
+        Movil movil = new Movil();
         
-        //Instanciamos la clase TelefonoService para crear el servicio
-        TelefonoService service = new TelefonoService();
+        //Instanciamos la clase MovilService para crear el servicio
+        MovilService service = new MovilService();
         
         //Llamamos a los metodos
-        service.cargarCelular(telefono);
-        service.ingresarCodigo(telefono);
-        service.mostrarTelefono(telefono);
+        service.cargarCelular(movil);
+        service.ingresarCodigo(movil);
+        service.mostrarmovil(movil);
     }
 }

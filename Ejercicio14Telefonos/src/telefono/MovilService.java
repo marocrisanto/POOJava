@@ -1,4 +1,4 @@
-package telefono;
+package movil;
 
 import java.util.Scanner;
 /*
@@ -29,66 +29,67 @@ que posee el sistema
 
 
 */
-public class TelefonoService {
+public class MovilService {
     Scanner leer = new Scanner(System.in);
     
-    
-    
+
     //Método cargarCelular(): se solicita al usuario que ingrese los datos necesarios para instanciar un objeto Celular 
     //y poder cargarlo en nuestro programa.
-    public void cargarCelular(Telefono telefono){
+    public Movil cargarCelular(Movil movil){
         
-        System.out.println("Ingrese el numero de telefonos que desea guardar");
+        Movil movil = new Movil();
+        
+        System.out.println("Ingrese el numero de movils que desea guardar");
         int cantidad = leer.nextInt();
         for (int i = 0; i < cantidad; i++) {
             
-            System.out.println("Ingrese la marca del telefono: ");  
+            System.out.println("Ingrese la marca del movil: ");  
             String marca = leer.nextLine();
-            telefono.setMarca(marca);
+            movil.setMarca(marca);
             leer.nextLine();
             
-            System.out.println("Ingrese el precio del telefono: ");
+            System.out.println("Ingrese el precio del movil: ");
             double precio = leer.nextDouble();
-            telefono.setPrecio(precio);
+            movil.setPrecio(precio);
 
-            System.out.println("Ingrese el modelo del telefono: ");
+            System.out.println("Ingrese el modelo del movil: ");
             String modelo = leer.nextLine();
-            telefono.setModelo(modelo);
+            movil.setModelo(modelo);
             leer.nextLine();
             
-            System.out.println("Ingrese la memoria Ram del telefono(en gigabytes): ");
+            System.out.println("Ingrese la memoria Ram del movil(en gigabytes): ");
             int memoriaRam = leer.nextInt();
-            telefono.setMemoriaRam(memoriaRam);
+            movil.setMemoriaRam(memoriaRam);
 
-            System.out.println("Ingrese el almacenamiento del telefono (en gigabytes): ");
+            System.out.println("Ingrese el almacenamiento del movil (en gigabytes): ");
             int almacenamiento = leer.nextInt();
-            telefono.setAlmacenamiento(almacenamiento);
-
-            System.out.println("Ingrese el codigo del telefono(7 digitos): ");
-            int codigoTelefono = leer.nextInt();
-            telefono.setCodigo(new int[codigoTelefono]);    
+            movil.setAlmacenamiento(almacenamiento);  
+            
+            int [] codigo = ingresarCodigo();
+            
+            
       }
 }
    
    //Método ingresarCodigo(): este método permitirá ingresar el código completo de siete números de un celular. 
    //Para ello, puede utilizarse un bucle repetitivo
-    public void ingresarCodigo(Telefono telefono){
-        System.out.println("Ingrese el codigo del telefono de 7 digitos: ");
-        for (int i = 0; i <telefono.getCodigo().length ; i++) {
+    public void ingresarCodigo(Movil movil){
+        System.out.println("Ingrese el codigo del movil de 7 digitos: ");
+        for (int i = 0; i <movil.getCodigo().length ; i++) {
             System.out.println("Ingrese el numero de la posicion"+(i+1)+": ");
-            telefono.getCodigo()[i] = leer.nextInt();
+            movil.getCodigo()[i] = leer.nextInt();
         }
     }
        
-   public void mostrarTelefono(Telefono telefono){     
-       System.out.println("La marca del telefono es: "+telefono.getMarca());
-       System.out.println("El modelo del telefono es: "+telefono.getModelo());
-       System.out.println("El precio del telefono es: "+telefono.getPrecio());
-       System.out.println("La memoria Ram del telefono es: "+telefono.getMemoriaRam()+"Gigas");
-       System.out.println("El almacenamiento del telefono es: "+telefono.getAlmacenamiento()+"Gigas");
-       System.out.println("El codigo del telefono es: ");
-       for (int i = 0; i < telefono.getCodigo().length ; i++) {
-           System.out.println(telefono.getCodigo()[i]+"");
+   public void mostrarmovil(Movil movil){     
+       System.out.println("La marca del movil es: "+movil.getMarca());
+       System.out.println("El modelo del movil es: "+movil.getModelo());
+       System.out.println("El precio del movil es: "+movil.getPrecio());
+       System.out.println("La memoria Ram del movil es: "+movil.getMemoriaRam()+"Gigas");
+       System.out.println("El almacenamiento del movil es: "+movil.getAlmacenamiento()+"Gigas");
+       System.out.println("El codigo del movil es: ");
+       for (int i = 0; i < movil.getCodigo().length ; i++) {
+           System.out.println(movil.getCodigo()[i]+"");
        }
        System.out.println();
    }
