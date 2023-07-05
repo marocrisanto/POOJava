@@ -39,7 +39,6 @@ public class MovilService {
             
         System.out.println("Ingrese la marca del telefono: ");  
         String marca = leer.nextLine();
-        leer.nextLine();
             
         System.out.println("Ingrese el precio del telefono: ");
         double precio = leer.nextDouble();
@@ -68,9 +67,8 @@ public class MovilService {
    //Para ello, puede utilizarse un bucle repetitivo
     public int[] ingresarCodigo(){
         int[] codigo = new int[7];
-        System.out.println("Ingrese el codigo del movil de 7 digitos: ");
         for (int i = 0; i <codigo.length ; i++) {
-            System.out.println("Ingrese el numero de la posicion"+(i+1)+": ");
+            System.out.println("Ingrese el codigo del movil de 7 digitos");
             codigo[i] = leer.nextInt();
 
         }
