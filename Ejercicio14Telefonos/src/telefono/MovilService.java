@@ -36,9 +36,6 @@ public class MovilService {
     //Método cargarCelular(): se solicita al usuario que ingrese los datos necesarios para instanciar un objeto Celular 
     //y poder cargarlo en nuestro programa.
     public Movil cargarCelular(){
-        
-        System.out.println("Ingrese el numero de telefonos que desea guardar");
-        int cantidad = leer.nextInt();
             
         System.out.println("Ingrese la marca del telefono: ");  
         String marca = leer.nextLine();
@@ -88,7 +85,7 @@ public class MovilService {
        System.out.println("El almacenamiento del movil es: "+movil.getAlmacenamiento()+"Gigas");
        System.out.println("El codigo del movil es: ");
        for (int i = 0; i < movil.getCodigo().length ; i++) {
-           System.out.println(movil.getCodigo()[i]+"");
+           System.out.print(movil.getCodigo()[i]+"");
        }
        System.out.println();
    }

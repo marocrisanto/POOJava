@@ -1,6 +1,7 @@
     
 package movilmain;
 
+import java.util.Scanner;
 import movil.Movil;
 import movil.MovilService;
 
@@ -22,11 +23,17 @@ Para ello, puede utilizarse un bucle repetitivo
 public class movilMain {
     public static void main(String[] args){
         
+        Scanner leer = new Scanner(System.in);
+        System.out.println("Ingrese el numero de telefonos que desea guardar");
+        int cantidad = leer.nextInt();
+        
         //Instanciamos la clase MovilService para crear el servicio
         MovilService service = new MovilService();
         
+        for (int i = 0; i < cantidad; i++) {
         //Llamamos a los metodos
         Movil movil = service.cargarCelular();
-        service.mostrarmovil(movil);
+        service.mostrarmovil(movil);    
+        }
     }
 }
