@@ -21,15 +21,12 @@ Para ello, puede utilizarse un bucle repetitivo
 
 public class movilMain {
     public static void main(String[] args){
-        //Instanciamos la clase Movil para crear un objeto vacio
-        Movil movil = new Movil();
         
         //Instanciamos la clase MovilService para crear el servicio
         MovilService service = new MovilService();
         
         //Llamamos a los metodos
-        service.cargarCelular(movil);
-        service.ingresarCodigo(movil);
+        Movil movil = service.cargarCelular();
         service.mostrarmovil(movil);
     }
 }
