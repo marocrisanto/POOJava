@@ -39,7 +39,7 @@ public class MovilService {
             
         System.out.println("Ingrese la marca del telefono: ");  
         String marca = leer.nextLine();
-            
+        
         System.out.println("Ingrese el precio del telefono: ");
         double precio = leer.nextDouble();
         leer.nextLine(); 
@@ -71,6 +71,7 @@ public class MovilService {
         for (int i = 0; i <codigo.length ; i++) {
             System.out.println("Ingrese el numero de la posicion"+(i+1)+": ");
             codigo[i] = leer.nextInt();
+            leer.nextLine();
         }
         return codigo;
     }
