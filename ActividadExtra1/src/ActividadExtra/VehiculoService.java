@@ -1,7 +1,10 @@
 
 package ActividadExtra;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Scanner;
+import java.util.TreeSet;
 
 /*
 Crear una clase "Vehículo" con atributos como "marca","modelo","año" y "tipo" (En tipo, vamos a indicar si es un automóvil, 
